@@ -1,11 +1,11 @@
 {
-  "name": "bestvision_upgrade",
+  "name": "create-react-redux-router-intl-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "antd": "^2.13.8",
-    "bootstrap": "3",
-    "fs": "^0.0.1-security",
+    "bootstrap": "^3.3.7",
+    "fs": "0.0.1-security",
     "glob": "^7.1.2",
     "mkdirp": "^0.5.1",
     "react": "^16.0.0",
@@ -15,8 +15,8 @@
     "react-redux": "^5.0.6",
     "react-responsive": "^3.0.0",
     "react-router-dom": "^4.2.2",
-    "react-router-redux": "next",
-    "react-scripts": "1.0.14",
+    "react-router-redux": "^5.0.0-alpha.8",
+    "react-scripts": "^1.0.14",
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0"
   },

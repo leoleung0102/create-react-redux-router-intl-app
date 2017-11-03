@@ -1,12 +1,11 @@
-import enLocaleData from '../translations/locales/en-US.json';
-import zhLocaleData from '../translations/locales/zh-TW.json';
+import {locale} from '../config';
+import {messages} from '../translations/locales/';
 
 export const SWITCH_USER_LOCALE = 'SWITCH_USER_LOCALE';
 
-const messages = {...enLocaleData, ...zhLocaleData};
 const initialState = {
-    userLocale: 'zh',
-    localeMessages: messages['zh']
+    userLocale: locale[0].replace('-',''),
+    localeMessages: messages[this.userLocale]
 };
 
 export default (state = initialState, action) => {

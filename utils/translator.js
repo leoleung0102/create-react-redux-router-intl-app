@@ -1,10 +1,11 @@
 /* eslint-disable */
 import * as fs from 'fs';
-import { sync as globSync } from 'glob';
-import { sync as mkdirpSync } from 'mkdirp';
+import {sync as globSync} from 'glob';
+import {sync as mkdirpSync} from 'mkdirp';
+import {locale} from '../src/config';
 
-const filePattern = '../src/translations/messages/**/*.json';
-const outputLanguageDataDir = '../src/translations/locales/';
+const filePattern = './src/translations/messages/**/*.json';
+const outputLanguageDataDir = './src/translations/locales/';
 
 // Aggregates the default messages that were extracted from the example app's
 // React components via the React Intl Babel plugin. An error will be thrown if
@@ -14,7 +15,7 @@ const defaultMessages = globSync(filePattern)
     .map((filename) => fs.readFileSync(filename, 'utf8'))
     .map((file) => JSON.parse(file))
     .reduce((collection, descriptors) => {
-        descriptors.forEach(({ id, defaultMessage }) => {
+        descriptors.forEach(({id, defaultMessage}) => {
             if (collection.hasOwnProperty(id)) {
                 throw new Error(`Duplicate message id: ${id}`);
             }
@@ -25,6 +26,14 @@ const defaultMessages = globSync(filePattern)
     }, {});
 
 mkdirpSync(outputLanguageDataDir);
-
-fs.writeFileSync(outputLanguageDataDir + 'en-US.json', `{ "en": ${JSON.stringify(defaultMessages, null, 2)} }`);
-fs.writeFileSync(outputLanguageDataDir + 'zh-TW.json', `{ "zh": ${JSON.stringify(defaultMessages, null, 2)} }`);
+let indexContent = '';
+locale.forEach((locale)=>{
+    fs.writeFileSync(outputLanguageDataDir + `${locale}.json`, `{ "${locale.replace('-','')}": ${JSON.stringify(defaultMessages, null, 2)} }`);
+    indexContent += `import ${locale.replace('-','')} from './${locale}.json'\n`;
+});
+indexContent += 'export const messages = [';
+locale.forEach((locale)=>{
+    indexContent += `...${locale.replace('-','')},`;
+});
+indexContent += '];';
+fs.writeFileSync(outputLanguageDataDir + `index.js`, indexContent);
