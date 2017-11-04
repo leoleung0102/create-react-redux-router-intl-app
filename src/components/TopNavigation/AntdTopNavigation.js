@@ -15,22 +15,33 @@ const AntdTopNavigation = props => (
                 src={props.brandLogoUrl}
             />
         </div>
-        <div className="top-navigation-item">
-            <Menu
-                mode="horizontal"
-                defaultSelectedKeys={['0']}
-            >
-                <Item key="language-switcher" className="language-switcher-transparent-bottom">
-                    <LanguageSwitcher></LanguageSwitcher>
-                </Item>
-                <Item key="home">
-                    <Link to="/">Home1</Link>
-                </Item>
-                <Item key="about">
-                    <Link to="/about-us">About</Link>
-                </Item>
-            </Menu>
-        </div>
+        <MediaQuery minWidth={1224} values={{ width: 1600 }}>
+            <div className="top-navigation-item">
+                <Menu
+                    mode="horizontal"
+                    defaultSelectedKeys={['0']}
+                >
+                    <Item key="language-switcher" className="language-switcher-transparent-bottom">
+                        <LanguageSwitcher></LanguageSwitcher>
+                    </Item>
+                    <Item key="home">
+                        <Link to="/">Home</Link>
+                    </Item>
+                    <Item key="about">
+                        <Link to="/about-us">About</Link>
+                    </Item>
+                </Menu>
+            </div>
+        </MediaQuery>
+        <MediaQuery maxWidth={1224} >
+            <div className="top-navigation-item">
+                <div className="hamburger-menu">
+                    <em />
+                    <em />
+                    <em />
+                </div>
+            </div>
+        </MediaQuery>
 
     </div>
 

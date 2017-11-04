@@ -5,10 +5,17 @@
   &-wrapper {
     display: inline-block;
     position: absolute;
-    top: 30%;
+    top: 50%;
     margin: auto;
     left: 0;
     right: 0;
-    width: 550px;
+    max-width: 70%;
+
+    //Children Content vertical space inside Banner
+    & .ant-row-flex>div {
+      margin-top: 8px;
+      margin-bottom: 8px;
+    }
+
   }
 }

@@ -18,14 +18,18 @@ const Home = props => (
                 type="flex"
                 justify="center"
                 align="middle"
-                className="text-center"
             >
                 <Col xs={20} md={20}>
-                    <h1>Home</h1>
-                    <h3 style={{ paddingTop: '20px' }}>
-                        Welcome home!
-                    </h3>
-                    <Button onClick={() => props.changePage()} type="primary">Go to about page via redux</Button>
+                    <h1>Project Title</h1>
+                </Col>
+            </Row>
+            <Row
+                type="flex"
+                justify="center"
+                align="middle"
+            >
+                <Col xs={20} md={20}>
+                    <Button size="large" onClick={() => props.changePage()} type="primary">Go to about page via redux</Button>
                 </Col>
 
             </Row>

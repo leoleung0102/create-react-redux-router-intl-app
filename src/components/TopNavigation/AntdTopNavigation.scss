@@ -1,10 +1,10 @@
+$navigation-height: 64px;
+
 .top-navigation{
-    height: 64px;
+    height: $navigation-height;
     background: transparent;
-    transition: background 1s linear;
     width: 100%;
     z-index: 970;
-    box-shadow: 0 5px 8px fade(#000, 15);
     position: fixed;
     top: 0;
 
@@ -13,9 +13,10 @@
         position: absolute;
         left: 4%;
         width: 150px;
-        line-height: 64px;
+        line-height: $navigation-height;
 
         & img {
+            height: $navigation-height;
             vertical-align: middle;
             display: inline-block;
         }
@@ -28,7 +29,7 @@
 
     &-item {
         float: right;
-        line-height: 64px;
+        line-height: $navigation-height;
         position: relative;
         margin-right: 4%;
 
@@ -38,16 +39,34 @@
 
         & .ant-menu {
             background: transparent;
-            line-height: 64px;
+            line-height: $navigation-height;
         }
 
         & .language-switcher-transparent-bottom.ant-menu-item:hover ,
         & .language-switcher-transparent-bottom.ant-menu-item-selected{
-            cursor: initial;
+            cursor: default;
             border-bottom: transparent;
 
         }
     }
 
+}
+
+@media screen and (max-width: 1224px) {
+    .top-navigation{
+
+        & .hamburger-menu {
+            margin: 20px;
+
+            & em {
+                display: block;
+                width: 16px;
+                height: 2px;
+                background: #CECECE;
+                margin-top: 4px;
+            }
+        }
+
+    }
 }
 
