@@ -1,0 +1,12 @@
+.language-switcher-transparent {
+  background: transparent;
+
+  &.active-locale {
+    color: #CECECE;
+    cursor: default;
+  }
+
+  &.ant-radio-button-wrapper {
+    border-color: transparent !important;
+  }
+}

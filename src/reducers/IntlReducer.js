@@ -1,10 +1,10 @@
-import {locale} from '../config';
+import {localeDict} from '../config';
 import {messages} from '../translations/locales/';
 
 export const SWITCH_USER_LOCALE = 'SWITCH_USER_LOCALE';
 
 const initialState = {
-    userLocale: locale[0].replace('-',''),
+    userLocale: Object.keys(localeDict)[0].replace('-',''),
     localeMessages: messages[this.userLocale]
 };
 
@@ -13,7 +13,7 @@ export default (state = initialState, action) => {
         case SWITCH_USER_LOCALE:
             return {
                 ...state,
-                userLocale: state.userLocale,
+                userLocale: action.payload.userLocale,
                 localeMessages: {...action.payload.localeMessages}
             };
 
@@ -25,6 +25,7 @@ export default (state = initialState, action) => {
 export const switchUserLocale = (userLocale) => ({
     type: SWITCH_USER_LOCALE,
     payload: {
+        userLocale: userLocale,
         localeMessages: messages[userLocale]
     }
 });

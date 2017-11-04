@@ -1,0 +1,14 @@
+.hero-header {
+  width: 100%;
+  position: relative;
+
+  &-wrapper {
+    display: inline-block;
+    position: absolute;
+    top: 30%;
+    margin: auto;
+    left: 0;
+    right: 0;
+    width: 550px;
+  }
+}

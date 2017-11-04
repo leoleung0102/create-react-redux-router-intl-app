@@ -1,0 +1,53 @@
+.top-navigation{
+    height: 64px;
+    background: transparent;
+    transition: background 1s linear;
+    width: 100%;
+    z-index: 970;
+    box-shadow: 0 5px 8px fade(#000, 15);
+    position: fixed;
+    top: 0;
+
+    .logo {
+        display: inline-block;
+        position: absolute;
+        left: 4%;
+        width: 150px;
+        line-height: 64px;
+
+        & img {
+            vertical-align: middle;
+            display: inline-block;
+        }
+
+        & a {
+            display: block;
+        }
+    }
+
+
+    &-item {
+        float: right;
+        line-height: 64px;
+        position: relative;
+        margin-right: 4%;
+
+        & .ant-menu-horizontal {
+            border-bottom-color: transparent;
+        }
+
+        & .ant-menu {
+            background: transparent;
+            line-height: 64px;
+        }
+
+        & .language-switcher-transparent-bottom.ant-menu-item:hover ,
+        & .language-switcher-transparent-bottom.ant-menu-item-selected{
+            cursor: initial;
+            border-bottom: transparent;
+
+        }
+    }
+
+}
+

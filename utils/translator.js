@@ -2,11 +2,11 @@
 import * as fs from 'fs';
 import {sync as globSync} from 'glob';
 import {sync as mkdirpSync} from 'mkdirp';
-import {locale} from '../src/config';
+import {localeDict} from '../src/config';
 
 const filePattern = './src/translations/messages/**/*.json';
 const outputLanguageDataDir = './src/translations/locales/';
-
+const locale = Object.keys(localeDict);
 // Aggregates the default messages that were extracted from the example app's
 // React components via the React Intl Babel plugin. An error will be thrown if
 // there are messages in different components that use the same `id`. The result
