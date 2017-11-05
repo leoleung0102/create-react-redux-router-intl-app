@@ -1,3 +1,5 @@
+@import '../../default.scss';
+
 $navigation-height: 64px;
 
 .top-navigation{
@@ -6,9 +8,15 @@ $navigation-height: 64px;
     width: 100%;
     z-index: 970;
     position: fixed;
+    transition: background 1s linear;
     top: 0;
 
+    &.overlay{
+        background:rgba(51,51,51,.95);;
+    }
+
     .logo {
+        z-index: 101;
         display: inline-block;
         position: absolute;
         left: 4%;
@@ -58,12 +66,18 @@ $navigation-height: 64px;
         & .hamburger-menu {
             margin: 20px;
 
-            & em {
-                display: block;
-                width: 16px;
-                height: 2px;
-                background: #CECECE;
-                margin-top: 4px;
+            & .hamburger-menu-button{
+                position: relative;
+                z-index: 100;
+
+                & em {
+                    display: block;
+                    width: 16px;
+                    height: 2px;
+                    background: #CECECE;
+                    margin-top: 4px;
+                    transition: transform .3s $ease-in-out, opacity .3s $ease-in-out;
+                }
             }
 
             & .hamburger-menu-item {
@@ -74,15 +88,32 @@ $navigation-height: 64px;
                 height: 100%;
                 padding-top: 64px;
                 opacity: 0;
-                //transition: opacity .3s @ease-in;
+                transition: opacity .2s $ease-out;
+                //transition: opacity .3s $ease-in;
                 pointer-events: none;
             }
 
             &.open{
+
+                & em {
+                    &:nth-child(1) {
+                        transform: translateY(6px) rotate(45deg);
+                    }
+
+                    &:nth-child(2) {
+                        opacity: 0;
+                    }
+
+                    &:nth-child(3) {
+                        transform: translateY(-6px) rotate(-45deg);
+                    }
+                }
+
                 & .hamburger-menu-item {
                     opacity: 1;
                     pointer-events: auto;
-                    //transition-timing-function: @ease-out;
+                    transition: opacity .2s $ease-in;
+                    background: #404040;
                 }
             }
         }

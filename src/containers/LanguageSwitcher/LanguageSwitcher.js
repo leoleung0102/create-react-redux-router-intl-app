@@ -9,18 +9,18 @@ import {
 } from '../../reducers/IntlReducer'
 
 const LanguageSwitcher = props => {
-    const isSelected = locale => locale === props.currentLocale;
-    const locale = Object.keys(localeDict);
+    const isSelected = locale => locale.replace('-','') === props.currentLocale;
     const localeName = locale => localeDict[locale] || locale;
+    const localeKeys = Object.keys(localeDict);
     return (
         <Radio.Group>
-            {locale.map(locale =>
+            {localeKeys.map(locale =>
                 <Radio.Button
                     key={locale}
-                    className={`language-switcher-transparent ${isSelected(locale.replace('-',''))? 'active-locale':''}`}
+                    className={`language-switcher-transparent ${isSelected(locale)? 'active-locale':''}`}
                     href={`?lang=${locale}`}
                     onClick={e => {
-                        props.switchUserLocale(locale.replace('-',''));
+                        props.switchUserLocale(locale);
                         e.preventDefault();
                     }}
                 >

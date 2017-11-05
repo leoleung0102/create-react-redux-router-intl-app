@@ -1,0 +1,22 @@
+[
+  {
+    "id": "home-header-title-1",
+    "defaultMessage": "Project Title"
+  },
+  {
+    "id": "home-section-title-1",
+    "defaultMessage": "Section Title"
+  },
+  {
+    "id": "home-section-desc-1",
+    "defaultMessage": "Description"
+  },
+  {
+    "id": "home-section-title-2",
+    "defaultMessage": "Section Title"
+  },
+  {
+    "id": "home-section-title-3",
+    "defaultMessage": "Section Title"
+  }
+]

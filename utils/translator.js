@@ -31,9 +31,9 @@ locale.forEach((locale)=>{
     fs.writeFileSync(outputLanguageDataDir + `${locale}.json`, `{ "${locale.replace('-','')}": ${JSON.stringify(defaultMessages, null, 2)} }`);
     indexContent += `import ${locale.replace('-','')} from './${locale}.json'\n`;
 });
-indexContent += 'export const messages = [';
+indexContent += 'export const messages = {';
 locale.forEach((locale)=>{
     indexContent += `...${locale.replace('-','')},`;
 });
-indexContent += '];';
+indexContent += '};';
 fs.writeFileSync(outputLanguageDataDir + `index.js`, indexContent);

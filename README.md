@@ -8,6 +8,7 @@ The UI library used is [Ant design](https://github.com/ant-design/ant-design) as
 
 Clone project
 ```bash
+# with SSH
 git clone git@github.com:OscarYuen/create-react-redux-router-intl-app.git YOUR_PROJECT_NAME
 
 # with HTTPS
@@ -34,7 +35,11 @@ There are two more new commands(build:translate and build:langs) for internation
 ```js
 //Locale Setting
 //The first locale would be the default locale
-export const locale = ['en-GB', 'zh-TW'];
+//The key is the locale and the value would be the locale display name
+export const localeDict = {
+    'en-GB' : 'English',
+    'zh-TW' : 'Chinese'
+};
 ```
 Note that you should follow
 [BCP 47](https://tools.ietf.org/html/bcp47)

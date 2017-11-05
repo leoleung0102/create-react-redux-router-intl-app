@@ -2,7 +2,6 @@ import React,{Component} from 'react'
 import PropTypes from 'prop-types';
 import MediaQuery from 'react-responsive';
 import Menu, {Item} from 'antd/lib/menu';
-import {Link} from 'react-router-dom';
 import LanguageSwitcher from '../../containers/LanguageSwitcher/LanguageSwitcher'
 import './AntdTopNavigation.css';
 
@@ -11,8 +10,17 @@ class AntdTopNavigation extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            menuOpen: false
+            menuOpen: false,
+            isTop: true
         };
+    }
+
+    componentDidMount() {
+        document.addEventListener('scroll', () => {
+            console.log(window.scrollY <= 100);
+            console.log(window.scrollY);
+            this.setState({ isTop: window.scrollY <= 800 })
+        });
     }
 
     clickMenu = () => {
@@ -23,7 +31,7 @@ class AntdTopNavigation extends Component {
 
     render() {
         return (
-            <div className="top-navigation">
+            <div className={`top-navigation ${this.state.isTop?'':'overlay'}`}>
                 <div className="logo">
                     <img
                         width="100%"
@@ -40,19 +48,14 @@ class AntdTopNavigation extends Component {
                             <Item key="language-switcher" className="language-switcher-transparent-bottom">
                                 <LanguageSwitcher></LanguageSwitcher>
                             </Item>
-                            <Item key="home">
-                                <Link to="/">Home</Link>
-                            </Item>
-                            <Item key="about">
-                                <Link to="/about-us">About</Link>
-                            </Item>
+                            {this.props.children}
                         </Menu>
                     </div>
                 </MediaQuery>
                 <MediaQuery maxWidth={1224}>
                     <div className='top-navigation-item'>
                         <div className={`hamburger-menu ${this.state.menuOpen?'open':''}`}>
-                            <div onClick={() => {
+                            <div className='hamburger-menu-button' onClick={() => {
                                 this.clickMenu();
                             }}>
                                 <em />
@@ -60,13 +63,8 @@ class AntdTopNavigation extends Component {
                                 <em />
                             </div>
                             <div className='hamburger-menu-item'>
-                                <Menu defaultSelectedKeys={['0']} mode="inline" theme="dark">
-                                    <Item key="home">
-                                        <Link to="/">Home</Link>
-                                    </Item>
-                                    <Item key="about">
-                                        <Link to="/about-us">About</Link>
-                                    </Item>
+                                <Menu defaultSelectedKeys={['0']} mode="inline" theme="dark" onClick={() => {this.clickMenu();}}>
+                                    {this.props.children}
                                 </Menu>
                             </div>
                         </div>

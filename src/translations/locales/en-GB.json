@@ -1,3 +1,8 @@
 { "enGB": {
-  "welcome": "Hello This is Create React App With redux, router v4, yahoo intl!"
+  "home-header-title-1": "Project Title",
+  "home-section-title-1": "Section Title",
+  "home-section-desc-1": "Description",
+  "home-section-title-2": "Section Title",
+  "home-section-title-3": "Section Title"
 } }
+

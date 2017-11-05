@@ -1,3 +1,7 @@
 { "zhTW": {
-  "welcome": "你好! 這是 Create React App With redux, router v4, yahoo intl!"
+  "home-header-title-1": "標題",
+  "home-section-title-1": "標題",
+  "home-section-desc-1": "描述",
+  "home-section-title-2": "標題",
+  "home-section-title-3": "標題"
 } }

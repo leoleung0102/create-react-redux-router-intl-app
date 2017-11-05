@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react'
 import PropTypes from 'prop-types';
-import './ImageHeroHeader.css';
+import './Section.css'
 
-const ImageHeroHeader = props => {
 
+const Section = props => {
     const styles = {
-        height: `${props.minHeight}vh`,
+        backgroundColor: props.backgroundColor,
         backgroundImage: props.backgroundImageUrl
             ? `url(${props.backgroundImageUrl})`
             : 'none',
@@ -15,18 +15,21 @@ const ImageHeroHeader = props => {
     };
 
     return (
-        <div className="hero-header" style={styles}>
-            <div className="hero-header-wrapper">
+        <section style={styles}>
+            <div className="section-wrapper">
                 {props.children}
             </div>
-        </div>
-    );
+        </section>
+    )
 };
 
-ImageHeroHeader.propTypes = {
+Section.propTypes = {
+    backgroundColor: PropTypes.string,
     backgroundImageUrl: PropTypes.string,
-    minHeight: PropTypes.number,
 };
 
+Section.defaultProps = {
+    backgroundColor: "transparent",
+};
 
-export default ImageHeroHeader;
+export default Section

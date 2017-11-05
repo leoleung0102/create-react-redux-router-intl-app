@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {FormattedMessage} from 'react-intl';
 import {Route, Link} from 'react-router-dom';
+import {Item} from 'antd/lib/menu';
 import AntdTopNavigation from './components/TopNavigation/AntdTopNavigation';
 import Home from './containers/Home';
 import About from './containers/About';
@@ -12,22 +12,18 @@ class App extends Component {
         return (
             <div className="App">
                 <AntdTopNavigation
-                    brandLogoUrl="//upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/140px-React-icon.svg.png"
+                    brandLogoUrl="http://www.brianfajardo.com/static/media/reactjs.0068a577.svg"
                 >
+                    <Item key="home">
+                        <Link to="/">Home</Link>
+                    </Item>
+                    <Item key="about">
+                        <Link to="/about-us">About</Link>
+                    </Item>
                 </AntdTopNavigation>
-                {/*<header className="App-header">*/}
-                    {/*<img src={logo} className="App-logo" alt="logo"/>*/}
-                    {/*<h1 className="App-title">Welcome to React</h1>*/}
-                    {/*<Link to="/">Home</Link>*/}
-                    {/*<Link to="/about-us">About</Link>*/}
-                {/*</header>*/}
                 {/*<p className="App-intro">*/}
                     {/*To get started, edit <code>src/App.js</code> and save to reload.*/}
                 {/*</p>*/}
-                {/*<FormattedMessage*/}
-                    {/*id="welcome"*/}
-                    {/*defaultMessage="Hello This is Create React App With redux, router v4, yahoo intl!"*/}
-                {/*/>*/}
                 <main>
                     <Route exact path="/" component={Home}/>
                     <Route exact path="/about-us" component={About}/>

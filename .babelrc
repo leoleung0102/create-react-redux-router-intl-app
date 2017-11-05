@@ -1,11 +1,16 @@
 {
-  "presets": ["react-app","es2015","react"],
+  "presets": [
+    "es2015",
+    "react",
+    "react-app"
+  ],
   "plugins": [
     [
-      "react-intl", {
-      "messagesDir": "src/translations/messages",
-      "enforceDescriptions": false
-    }
+      "react-intl",
+      {
+        "messagesDir": "src/translations/messages",
+        "enforceDescriptions": false
+      }
     ]
   ]
 }
