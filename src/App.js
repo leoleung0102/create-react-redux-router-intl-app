@@ -4,8 +4,10 @@ import './App.css';
 import {Route, Link} from 'react-router-dom';
 import {Item} from 'antd/lib/menu';
 import AntdTopNavigation from './components/TopNavigation/AntdTopNavigation';
+import Footer from './components/Footer/Footer';
 import Home from './containers/Home';
 import About from './containers/About';
+
 
 class App extends Component {
     render() {
@@ -21,6 +23,7 @@ class App extends Component {
                         <Link to="/about-us">About</Link>
                     </Item>
                 </AntdTopNavigation>
+
                 {/*<p className="App-intro">*/}
                     {/*To get started, edit <code>src/App.js</code> and save to reload.*/}
                 {/*</p>*/}
@@ -28,6 +31,11 @@ class App extends Component {
                     <Route exact path="/" component={Home}/>
                     <Route exact path="/about-us" component={About}/>
                 </main>
+                <Footer
+                    brandLogoUrl="http://www.brianfajardo.com/static/media/reactjs.0068a577.svg"
+                >
+
+                </Footer>
 
             </div>
         );

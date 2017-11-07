@@ -1,3 +1,5 @@
+@import '../../default.scss';
+
 .hero-header {
   width: 100%;
   position: relative;
@@ -5,11 +7,13 @@
   &-wrapper {
     display: inline-block;
     position: absolute;
-    top: 50%;
+    top: 35%;
     margin: auto;
     left: 0;
     right: 0;
     max-width: 70%;
+    animation: fadeInFromTop .5s;
+    animation-timing-function: $ease-in-out;
 
     //Children Content vertical space inside Banner
     & .ant-row-flex>div {

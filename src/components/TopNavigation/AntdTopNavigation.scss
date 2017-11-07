@@ -12,7 +12,7 @@ $navigation-height: 64px;
     top: 0;
 
     &.overlay{
-        background:rgba(51,51,51,.95);;
+        background:rgba(51,51,51,.95);
     }
 
     .logo {
@@ -60,7 +60,7 @@ $navigation-height: 64px;
 
 }
 
-@media screen and (max-width: 1224px) {
+@media screen and (max-width: 1199px) {
     .top-navigation{
 
         & .hamburger-menu {

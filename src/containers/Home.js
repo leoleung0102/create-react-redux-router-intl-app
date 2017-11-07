@@ -25,7 +25,7 @@ const Home = props => (
                 justify="center"
                 align="middle"
             >
-                <Col xs={20} md={20}>
+                <Col span={20}>
                     <h1>
                         <FormattedMessage
                             id="home-header-title-1"
@@ -39,7 +39,7 @@ const Home = props => (
                 justify="center"
                 align="middle"
             >
-                <Col xs={20} md={20}>
+                <Col span={20}>
                     <Button size="large" onClick={() => props.changePage()} type="primary">Go to about page via
                         redux</Button>
                 </Col>
@@ -126,6 +126,49 @@ const Home = props => (
             <Row type="flex" justify="space-around" align="middle">
                 <Col span={16}>
                     <ResponsiveEmbeddedYoutube src="https://www.youtube.com/embed/a1lVf3jZdi8"></ResponsiveEmbeddedYoutube>
+                </Col>
+            </Row>
+        </Section>
+        <Section>
+            <SectionHeader>
+                <h2>
+                    <FormattedMessage
+                        id="home-section-title-4"
+                        defaultMessage="Section Title"
+                    />
+                </h2>
+            </SectionHeader>
+            <Row type="flex" justify="space-around" align="middle">
+                <Col span={4}>
+                    <ResponsiveImage alt="image" src="http://res.cloudinary.com/dxlb0hdxg/image/upload/v1508594031/Design_dyphpw.svg"/>
+                    <p>Introduction</p>
+                </Col>
+                <Col span={4}>
+                    <ResponsiveImage alt="image" src="http://res.cloudinary.com/dxlb0hdxg/image/upload/v1508594031/Design_dyphpw.svg"/>
+                    <p>Introduction</p>
+                </Col>
+                <Col span={4}>
+                    <ResponsiveImage alt="image" src="http://res.cloudinary.com/dxlb0hdxg/image/upload/v1508594031/Design_dyphpw.svg"/>
+                    <p>Introduction</p>
+                </Col>
+                <Col span={4}>
+                    <ResponsiveImage alt="image" src="http://res.cloudinary.com/dxlb0hdxg/image/upload/v1508594031/Design_dyphpw.svg"/>
+                    <p>Introduction</p>
+                </Col>
+            </Row>
+        </Section>
+        <Section>
+            <SectionHeader>
+                <h2>
+                    <FormattedMessage
+                        id="home-section-title-6"
+                        defaultMessage="Section Title"
+                    />
+                </h2>
+            </SectionHeader>
+            <Row type="flex" justify="space-around" align="middle">
+                <Col span={12}>
+                    <Button size="large" onClick={() => props.changePage()} type="primary">Contact Us</Button>
                 </Col>
             </Row>
         </Section>

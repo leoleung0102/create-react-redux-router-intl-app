@@ -1,0 +1,56 @@
+.footer {
+  background-color: #AEAEAE;
+
+  & .footer-wrapper{
+    width: 1150px;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    & .company-info {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      text-align: left;
+    }
+
+    & .footer-menu{
+      padding-top: 10px;
+      padding-bottom: 10px;
+      & h2 {
+        padding-bottom: 15px;
+      }
+    }
+
+    & .company-logo{
+      text-align: left;
+    }
+
+    & .footer-right{
+      text-align: right;
+    }
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .footer {
+
+    & .footer-wrapper{
+      width: 90%;
+
+      & .company-info{
+        text-align: left;
+      }
+
+      & .footer-menu{
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-align: left;
+        & p {
+          display: inline;
+          padding-right: 20px;
+        }
+      }
+
+    }
+  }
+}

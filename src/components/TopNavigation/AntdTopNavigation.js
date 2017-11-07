@@ -17,9 +17,7 @@ class AntdTopNavigation extends Component {
 
     componentDidMount() {
         document.addEventListener('scroll', () => {
-            console.log(window.scrollY <= 100);
-            console.log(window.scrollY);
-            this.setState({ isTop: window.scrollY <= 800 })
+            this.setState({ isTop: window.scrollY <= window.innerHeight * 0.8 })
         });
     }
 
@@ -31,7 +29,7 @@ class AntdTopNavigation extends Component {
 
     render() {
         return (
-            <div className={`top-navigation ${this.state.isTop?'':'overlay'}`}>
+            <div className={`top-navigation ${this.state.isTop?'':'overlay'}`} >
                 <div className="logo">
                     <img
                         width="100%"
@@ -39,7 +37,7 @@ class AntdTopNavigation extends Component {
                         src={this.props.brandLogoUrl}
                     />
                 </div>
-                <MediaQuery minWidth={1224} values={{width: 1600}}>
+                <MediaQuery minWidth={1199} values={{width: 1600}}>
                     <div className="top-navigation-item">
                         <Menu
                             mode="horizontal"
@@ -52,7 +50,7 @@ class AntdTopNavigation extends Component {
                         </Menu>
                     </div>
                 </MediaQuery>
-                <MediaQuery maxWidth={1224}>
+                <MediaQuery maxWidth={1199}>
                     <div className='top-navigation-item'>
                         <div className={`hamburger-menu ${this.state.menuOpen?'open':''}`}>
                             <div className='hamburger-menu-button' onClick={() => {

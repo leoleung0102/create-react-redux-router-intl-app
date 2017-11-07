@@ -4,7 +4,7 @@ import './ResponsiveEmbeddedYoutube.css'
 
 const ResponsiveEmbeddedYoutube = props => (
     <div className="youtube-wrapper">
-        <iframe width="560" height="315" src={props.src} frameBorder="0" allowFullScreen></iframe>
+        <iframe title="demo-video" width="560" height="315" src={props.src} frameBorder="0" allowFullScreen></iframe>
     </div>
 );
 
