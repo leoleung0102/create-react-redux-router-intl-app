@@ -32,7 +32,9 @@
     }
 
     & .company-logo {
-      text-align: left;
+      display: block;
+      margin-right: auto;
+      width: 150px;
     }
 
     & .footer-right {
@@ -48,9 +50,7 @@
       width: 90%;
 
       & .company-info {
-        display: block;
-        margin-right: auto;
-        width: 150px;
+        text-align: left;
       }
 
       & .footer-menu {

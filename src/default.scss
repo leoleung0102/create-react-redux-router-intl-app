@@ -1,46 +1,75 @@
 //  Theme
-$navigation-font-color   : #FFFFFF;
+$navigation-font-color: #FFFFFF;
 $navigation-height: 64px;
 
-$banner-font-color   : #FFFFFF;
+$banner-font-color: #FFFFFF;
 
 $footer-background-color: #1d2228;
-$footer-font-color   : #ccc;
-$footer-link-color  : #666;
+$footer-font-color: #ccc;
+$footer-link-color: #666;
 $footer-height: 64px;
 
-
 // Animation
-$ease-out            : cubic-bezier(0.215, 0.61, 0.355, 1);
-$ease-in             : cubic-bezier(0.55, 0.055, 0.675, 0.19);
-$ease-in-out         : cubic-bezier(0.645, 0.045, 0.355, 1);
-$ease-out-back       : cubic-bezier(0.12, 0.4, 0.29, 1.46);
+$ease-out: cubic-bezier(0.215, 0.61, 0.355, 1);
+$ease-in: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+$ease-in-out: cubic-bezier(0.645, 0.045, 0.355, 1);
+$ease-out-back: cubic-bezier(0.12, 0.4, 0.29, 1.46);
 
 @keyframes fadeInFromTop {
-  from { opacity: 0; transform: translate(0,-100px); }
-  to   { opacity: 1; transform: translate(0,0); }
+  from {
+    opacity: 0;
+    transform: translate(0, -100px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
 }
 
 /* Firefox < 16 */
 @-moz-keyframes fadeInFromTop {
-  from { opacity: 0; transform: translate(0,-100px); }
-  to   { opacity: 1; transform: translate(0,0); }
+  from {
+    opacity: 0;
+    transform: translate(0, -100px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
 }
 
 /* Safari, Chrome and Opera > 12.1 */
 @-webkit-keyframes fadeInFromTop {
-  from { opacity: 0; transform: translate(0,-100px); }
-  to   { opacity: 1; transform: translate(0,0); }
+  from {
+    opacity: 0;
+    transform: translate(0, -100px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
 }
 
 /* Internet Explorer */
 @-ms-keyframes fadeInFromTop {
-  from { opacity: 0; transform: translate(0,-100px); }
-  to   { opacity: 1; transform: translate(0,0); }
+  from {
+    opacity: 0;
+    transform: translate(0, -100px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
 }
 
 /* Opera < 12.1 */
 @-o-keyframes fadeInFromTop {
-  from { opacity: 0; transform: translate(0,-100px); }
-  to   { opacity: 1; transform: translate(0,0); }
+  from {
+    opacity: 0;
+    transform: translate(0, -100px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
 }

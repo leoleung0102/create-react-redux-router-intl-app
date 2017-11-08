@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {Link} from 'react-router-dom';
 import Row from 'antd/lib/row';
 import Col from 'antd/lib/col';
 import './Footer.css';
