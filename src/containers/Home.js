@@ -62,16 +62,20 @@ const Home = props => (
             </SectionHeader>
             <Row type="flex" justify="space-around" align="middle">
                 <Col span={4}>
-                    <ResponsiveImage alt="image" src="http://res.cloudinary.com/dxlb0hdxg/image/upload/v1508594031/Design_dyphpw.svg"/>
+                    <ResponsiveImage alt="image"
+                                     src="http://res.cloudinary.com/dxlb0hdxg/image/upload/v1508594031/Design_dyphpw.svg"/>
                 </Col>
                 <Col span={4}>
-                    <ResponsiveImage alt="image" src="http://res.cloudinary.com/dxlb0hdxg/image/upload/v1508594031/Design_dyphpw.svg"/>
+                    <ResponsiveImage alt="image"
+                                     src="http://res.cloudinary.com/dxlb0hdxg/image/upload/v1508594031/Design_dyphpw.svg"/>
                 </Col>
                 <Col span={4}>
-                    <ResponsiveImage alt="image" src="http://res.cloudinary.com/dxlb0hdxg/image/upload/v1508594031/Design_dyphpw.svg"/>
+                    <ResponsiveImage alt="image"
+                                     src="http://res.cloudinary.com/dxlb0hdxg/image/upload/v1508594031/Design_dyphpw.svg"/>
                 </Col>
                 <Col span={4}>
-                    <ResponsiveImage alt="image" src="http://res.cloudinary.com/dxlb0hdxg/image/upload/v1508594031/Design_dyphpw.svg"/>
+                    <ResponsiveImage alt="image"
+                                     src="http://res.cloudinary.com/dxlb0hdxg/image/upload/v1508594031/Design_dyphpw.svg"/>
                 </Col>
             </Row>
         </Section>
@@ -98,7 +102,7 @@ const Home = props => (
                     <Card title="Card title">Card content</Card>
                 </Col>
             </Row>
-            <Row gutter={16} type="flex" justify="space-around" align="middle" >
+            <Row gutter={16} type="flex" justify="space-around" align="middle">
                 <Col span={3}>
                 </Col>
                 <Col span={6}>
@@ -125,7 +129,8 @@ const Home = props => (
             </SectionHeader>
             <Row type="flex" justify="space-around" align="middle">
                 <Col span={16}>
-                    <ResponsiveEmbeddedYoutube src="https://www.youtube.com/embed/a1lVf3jZdi8"></ResponsiveEmbeddedYoutube>
+                    <ResponsiveEmbeddedYoutube
+                        src="https://www.youtube.com/embed/a1lVf3jZdi8"></ResponsiveEmbeddedYoutube>
                 </Col>
             </Row>
         </Section>
@@ -140,19 +145,23 @@ const Home = props => (
             </SectionHeader>
             <Row type="flex" justify="space-around" align="middle">
                 <Col span={4}>
-                    <ResponsiveImage alt="image" src="http://res.cloudinary.com/dxlb0hdxg/image/upload/v1508594031/Design_dyphpw.svg"/>
+                    <ResponsiveImage alt="image"
+                                     src="http://res.cloudinary.com/dxlb0hdxg/image/upload/v1508594031/Design_dyphpw.svg"/>
                     <p>Introduction</p>
                 </Col>
                 <Col span={4}>
-                    <ResponsiveImage alt="image" src="http://res.cloudinary.com/dxlb0hdxg/image/upload/v1508594031/Design_dyphpw.svg"/>
+                    <ResponsiveImage alt="image"
+                                     src="http://res.cloudinary.com/dxlb0hdxg/image/upload/v1508594031/Design_dyphpw.svg"/>
                     <p>Introduction</p>
                 </Col>
                 <Col span={4}>
-                    <ResponsiveImage alt="image" src="http://res.cloudinary.com/dxlb0hdxg/image/upload/v1508594031/Design_dyphpw.svg"/>
+                    <ResponsiveImage alt="image"
+                                     src="http://res.cloudinary.com/dxlb0hdxg/image/upload/v1508594031/Design_dyphpw.svg"/>
                     <p>Introduction</p>
                 </Col>
                 <Col span={4}>
-                    <ResponsiveImage alt="image" src="http://res.cloudinary.com/dxlb0hdxg/image/upload/v1508594031/Design_dyphpw.svg"/>
+                    <ResponsiveImage alt="image"
+                                     src="http://res.cloudinary.com/dxlb0hdxg/image/upload/v1508594031/Design_dyphpw.svg"/>
                     <p>Introduction</p>
                 </Col>
             </Row>

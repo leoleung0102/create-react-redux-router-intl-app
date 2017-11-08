@@ -1,4 +1,4 @@
-import React,{Component} from 'react'
+import React, {Component} from 'react'
 import PropTypes from 'prop-types';
 import MediaQuery from 'react-responsive';
 import Menu, {Item} from 'antd/lib/menu';
@@ -11,13 +11,13 @@ class AntdTopNavigation extends Component {
         super(props);
         this.state = {
             menuOpen: false,
-            isTop: true
+            isTop: window.scrollY <= window.innerHeight * 0.8
         };
     }
 
     componentDidMount() {
         document.addEventListener('scroll', () => {
-            this.setState({ isTop: window.scrollY <= window.innerHeight * 0.8 })
+            this.setState({isTop: window.scrollY <= window.innerHeight * 0.8})
         });
     }
 
@@ -29,7 +29,7 @@ class AntdTopNavigation extends Component {
 
     render() {
         return (
-            <div className={`top-navigation ${this.state.isTop?'':'overlay'}`} >
+            <div className={`top-navigation ${this.state.isTop ? '' : 'overlay'}`}>
                 <div className="logo">
                     <img
                         width="100%"
@@ -52,7 +52,7 @@ class AntdTopNavigation extends Component {
                 </MediaQuery>
                 <MediaQuery maxWidth={1199}>
                     <div className='top-navigation-item'>
-                        <div className={`hamburger-menu ${this.state.menuOpen?'open':''}`}>
+                        <div className={`hamburger-menu ${this.state.menuOpen ? 'open' : ''}`}>
                             <div className='hamburger-menu-button' onClick={() => {
                                 this.clickMenu();
                             }}>
@@ -61,7 +61,9 @@ class AntdTopNavigation extends Component {
                                 <em />
                             </div>
                             <div className='hamburger-menu-item'>
-                                <Menu defaultSelectedKeys={['0']} mode="inline" theme="dark" onClick={() => {this.clickMenu();}}>
+                                <Menu defaultSelectedKeys={['0']} mode="inline" theme="dark" onClick={() => {
+                                    this.clickMenu();
+                                }}>
                                     {this.props.children}
                                 </Menu>
                             </div>
@@ -72,10 +74,11 @@ class AntdTopNavigation extends Component {
         )
     }
 
-};
+}
+;
 
 AntdTopNavigation.propTypes = {
-    brandLogoUrl : PropTypes.string.isRequired
+    brandLogoUrl: PropTypes.string.isRequired
 };
 
 export default AntdTopNavigation;

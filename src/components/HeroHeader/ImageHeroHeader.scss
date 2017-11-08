@@ -15,13 +15,28 @@
     animation: fadeInFromTop .5s;
     animation-timing-function: $ease-in-out;
 
+    & h1, h2, h3, h4, h5, h6, p {
+      color: $banner-font-color;
+    }
+
+    & .ant-btn-primary {
+      height: 40px;
+      color: #fff;
+      background-color: #108ee9;
+      border-color: #108ee9;
+    }
+
+    & .ant-btn-primary:hover {
+      background-color: #108ee9;
+    }
+
     //Children Content vertical space inside Banner
-    & .ant-row-flex>div {
+    & .ant-row-flex > div {
       margin-top: 8px;
       margin-bottom: 8px;
     }
 
-    & h1{
+    & h1 {
       font-size: 4em;
     }
 

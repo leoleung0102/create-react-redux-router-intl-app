@@ -9,7 +9,7 @@ const ResponsiveEmbeddedYoutube = props => (
 );
 
 ResponsiveEmbeddedYoutube.propTypes = {
-  src: PropTypes.string.isRequired
+    src: PropTypes.string.isRequired
 };
 
 export default ResponsiveEmbeddedYoutube

@@ -1,11 +1,21 @@
-.footer {
-  background-color: #AEAEAE;
+@import '../../default.scss';
 
-  & .footer-wrapper{
+.footer {
+  background-color: $footer-background-color;
+
+  & .footer-wrapper {
     width: 1150px;
     margin: 0 auto;
     padding-top: 20px;
     padding-bottom: 20px;
+
+    & h1, h2, h3, h4, h5, h6, p {
+      color: $footer-font-color;
+    }
+
+    & a {
+      color: $footer-link-color;
+    }
 
     & .company-info {
       padding-top: 10px;
@@ -13,7 +23,7 @@
       text-align: left;
     }
 
-    & .footer-menu{
+    & .footer-menu {
       padding-top: 10px;
       padding-bottom: 10px;
       & h2 {
@@ -21,11 +31,11 @@
       }
     }
 
-    & .company-logo{
+    & .company-logo {
       text-align: left;
     }
 
-    & .footer-right{
+    & .footer-right {
       text-align: right;
     }
   }
@@ -34,18 +44,20 @@
 @media screen and (max-width: 1199px) {
   .footer {
 
-    & .footer-wrapper{
+    & .footer-wrapper {
       width: 90%;
 
-      & .company-info{
-        text-align: left;
+      & .company-info {
+        display: block;
+        margin-right: auto;
+        width: 150px;
       }
 
-      & .footer-menu{
+      & .footer-menu {
         padding-top: 10px;
         padding-bottom: 10px;
         text-align: left;
-        & p {
+        & p, a {
           display: inline;
           padding-right: 20px;
         }

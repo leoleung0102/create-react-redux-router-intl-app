@@ -17,8 +17,7 @@ const Footer = props => (
                 </Col>
                 <Col xs={24} lg={4} className="footer-menu">
                     <h2>Company</h2>
-                    <p>About Us</p>
-                    <p>About Us</p>
+                    <Link to="/about-us">About Us</Link>
                     <p>About Us</p>
                 </Col>
                 <Col xs={24} lg={4} className="footer-menu">
@@ -48,8 +47,8 @@ const Footer = props => (
     </footer>
 );
 
-Footer.propTypes= {
-    brandLogoUrl : PropTypes.string.isRequired
+Footer.propTypes = {
+    brandLogoUrl: PropTypes.string.isRequired
 };
 
 

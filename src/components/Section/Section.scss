@@ -1,12 +1,20 @@
-.section-wrapper{
+.section-wrapper {
   width: 1150px;
   margin: 0 auto;
   padding-top: 30px;
   padding-bottom: 20px;
+
+  & .paragraph {
+    padding-top: 10px;
+
+    & h2 {
+      padding-bottom: 5px;
+    }
+  }
 }
 
 @media screen and (max-width: 1199px) {
-  .section-wrapper{
+  .section-wrapper {
     width: 90%;
   }
 }
