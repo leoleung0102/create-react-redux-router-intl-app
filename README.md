@@ -1,8 +1,11 @@
 # Create React Redux Router Intl App
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+
 It is integrated with [redux](https://github.com/reactjs/redux), [react-router v4](https://github.com/ReactTraining/react-router) and [react-intl](https://github.com/yahoo/react-intl)
 The UI library used is [Ant design](https://github.com/ant-design/ant-design) as default.
+
+It also includes some basic components like fixed top navigation and language switcher to adopt i18n as the starting point.
 
 ## Getting Started
 
@@ -61,6 +64,9 @@ import zh from 'react-intl/locale-data/zh';
 4. Execute `npm build:langs` to copy your message file into different message json file by locale.
    For example, you would see `en-GB.json` and `zh-TW.json` under locales folder
    You could translate the message in the json files respectively
+   
+## How to switch language dynamically
+1. Language Switcher component is included under `/src/components/LanguageSwitcher` folder. It would generated the locale options by your `src/config.js` and allow you to switch language
 
 ## How to use the redux
 
