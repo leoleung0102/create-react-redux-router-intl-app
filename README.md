@@ -9,6 +9,19 @@ It also includes some basic components like fixed top navigation and language sw
 
 [Demo](https://oscaryuen.github.io/create-react-redux-router-intl-app/)
 
+## Integrated Feature
+- [x] Support SCSS
+- [x] Support i18n
+- [x] Integrate redux
+- [x] Integrate react-router v4
+- [x] Integrate ant design as default UI framework
+- [x] Integrate react-snap to render static html
+- [x] Support code-spliting on `npm build`
+- [x] Basic built-in react components(e.g. top navigation)
+- [ ] Support graphql
+- [ ] Implement router with authentication
+- [ ] TBA
+
 ## Getting Started
 
 Clone project
