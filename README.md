@@ -29,7 +29,7 @@ npm install -g cross-env
 ### Installing
 
 Every start, build, test, eject command are the same as [Create React App](https://github.com/facebookincubator/create-react-app).
-There are two more new commands(build:translate and build:langs) for internationalizing your react app.
+There are two more new commands(build-translate and build-langs) for internationalizing your react app.
 
 ### How to add a new locale
 
@@ -56,12 +56,12 @@ import zh from 'react-intl/locale-data/zh';
 [en, zh].forEach(addLocaleData);
 ```
 
-3. Execute `npm build:translate` to strip out messages from your React component.
+3. Execute `npm build-translate` to strip out messages from your React component.
    Message files are created in `src/translations/messages` directory.
    You could refer to [react-intl](https://github.com/yahoo/react-intl) to see how to internationalize your React component
 
 
-4. Execute `npm build:langs` to copy your message file into different message json file by locale.
+4. Execute `npm build-langs` to copy your message file into different message json file by locale.
    For example, you would see `en-GB.json` and `zh-TW.json` under locales folder
    You could translate the message in the json files respectively
    

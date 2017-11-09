@@ -2,7 +2,7 @@
 // import 'bootstrap/dist/css/bootstrap-theme.css';
 import 'antd/dist/antd.css';
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { hydrate, render } from 'react-dom';
 import './index.css';
 import { Provider } from 'react-redux'
 import { ConnectedRouter } from 'react-router-redux'
@@ -16,13 +16,26 @@ import en from 'react-intl/locale-data/en';
 import zh from 'react-intl/locale-data/zh';
 [en, zh].forEach(addLocaleData);
 
-ReactDOM.render(
-    <Provider store={store}>
+const rootElement = document.getElementById('root');
+if (rootElement.hasChildNodes()) {
+    hydrate(
+        <Provider store={store}>
             <ConnectedIntlProvider>
                 <ConnectedRouter history={history}>
                     <App />
                 </ConnectedRouter>
             </ConnectedIntlProvider>
-    </Provider>
-    , document.getElementById('root'));
+        </Provider>
+        , rootElement);
+} else {
+    render(
+        <Provider store={store}>
+            <ConnectedIntlProvider>
+                <ConnectedRouter history={history}>
+                    <App />
+                </ConnectedRouter>
+            </ConnectedIntlProvider>
+        </Provider>
+        , rootElement);
+}
 registerServiceWorker();
