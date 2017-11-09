@@ -7,6 +7,8 @@ The UI library used is [Ant design](https://github.com/ant-design/ant-design) as
 
 It also includes some basic components like fixed top navigation and language switcher to adopt i18n as the starting point.
 
+[Demo](https://oscaryuen.github.io/create-react-redux-router-intl-app/)
+
 ## Getting Started
 
 Clone project
