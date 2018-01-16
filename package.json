@@ -33,13 +33,23 @@
     "build-js": "cross-env GENERATE_SOURCEMAP=false react-scripts build",
     "build": "cross-env GENERATE_SOURCEMAP=false npm-run-all build-css build-js && react-snap",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,json,css,scss}": [
+      "prettier --single-quote --no-bracket-spacing --arrow-parens always --write",
+      "git add"
+    ]
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-plugin-react-intl": "^2.3.1",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react-app": "^3.0.3",
-    "react-snap": "^0.8.1"
+    "react-snap": "^0.8.1",
+    "husky": "^0.14.3",
+    "lint-staged": "^6.0.0",
+    "prettier": "^1.9.2"
   }
 }
