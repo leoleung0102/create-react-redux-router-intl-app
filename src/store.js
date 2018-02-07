@@ -4,15 +4,18 @@ import thunk from 'redux-thunk'
 import createHistory from 'history/createBrowserHistory'
 import rootReducer from './reducers'
 import logger from 'redux-logger'
+import client from './lib/apolloClient';
 
 export const history = createHistory();
+
 
 const initialState = {};
 const enhancers = [];
 const middleware = [
     thunk,
     routerMiddleware(history),
-    logger
+    logger,
+    client,
 ];
 
 if (process.env.NODE_ENV === 'development') {
@@ -31,7 +34,8 @@ const composedEnhancers = compose(
 const store = createStore(
     rootReducer,
     initialState,
-    composedEnhancers
+    composedEnhancers,
+    applyMiddleware(...middleware)
 );
 
 export default store

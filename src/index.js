@@ -4,7 +4,7 @@ import 'antd/dist/antd.css';
 import React from 'react';
 import { hydrate, render } from 'react-dom';
 import './index.css';
-import { Provider } from 'react-redux'
+import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'react-router-redux'
 import store, { history } from './store'
 import {addLocaleData} from 'react-intl';

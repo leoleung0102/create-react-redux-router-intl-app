@@ -32,7 +32,6 @@ class App extends Component {
                     brandLogoUrl="http://www.brianfajardo.com/static/media/reactjs.0068a577.svg"
                 >
                 </Footer>
-
             </div>
         );
     }
